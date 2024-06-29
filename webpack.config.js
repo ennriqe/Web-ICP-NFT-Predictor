@@ -15,6 +15,12 @@ module.exports = {
         fallback: {
             buffer: require.resolve('buffer/'),
             stream: require.resolve('stream-browserify'),
+            crypto: require.resolve('crypto-browserify'),
+            assert: require.resolve('assert/'),
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+            os: require.resolve('os-browserify/browser'),
+            url: require.resolve('url/'),
         },
     },
     module: {
@@ -37,6 +43,7 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],
+            process: 'process/browser',
         }),
     ],
 };
