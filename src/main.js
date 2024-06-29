@@ -1,3 +1,7 @@
+// Import Buffer explicitly
+import { Buffer } from 'buffer';
+global.Buffer = Buffer; // Make Buffer available globally
+// Other imports
 import { HttpAgent, Actor } from '@dfinity/agent';
 import { Principal } from '@dfinity/principal';
 
