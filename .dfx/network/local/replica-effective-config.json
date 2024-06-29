@@ -1,0 +1,31 @@
+{
+  "replica_rev": "5e285dcaf77db014ac85d6f96ff392fe461945f5",
+  "type": "replica",
+  "config": {
+    "http_handler": {
+      "port": null,
+      "write_port_to": "/Users/ennriqe/Web-ICP-NFT-Predictor-clean/.dfx/network/local/replica-configuration/replica-1.port"
+    },
+    "state_manager": {
+      "state_root": "/Users/ennriqe/Web-ICP-NFT-Predictor-clean/.dfx/network/local/state/replicated_state"
+    },
+    "crypto": {
+      "crypto_root": "/Users/ennriqe/Web-ICP-NFT-Predictor-clean/.dfx/network/local/state/crypto_store"
+    },
+    "artifact_pool": {
+      "consensus_pool_path": "/Users/ennriqe/Web-ICP-NFT-Predictor-clean/.dfx/network/local/state/consensus_pool"
+    },
+    "subnet_type": "application",
+    "btc_adapter": {
+      "enabled": false,
+      "socket_path": null
+    },
+    "canister_http_adapter": {
+      "enabled": true,
+      "socket_path": "/var/folders/vs/v2spybcx4wz_xfk2dbj37g0c0000gn/T/ic-https-outcalls-adapter-socket.7503.1719668989"
+    },
+    "log_level": "error",
+    "artificial_delay": 600,
+    "use_old_metering": false
+  }
+}
