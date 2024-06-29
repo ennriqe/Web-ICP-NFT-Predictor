@@ -1,3 +1,0 @@
-# Ignore node_modules except for the problematic file
-node_modules/
-!node_modules/public-encrypt
