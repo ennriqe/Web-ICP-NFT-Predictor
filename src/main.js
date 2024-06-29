@@ -1,6 +1,5 @@
 // Import Buffer explicitly
 import { Buffer } from 'buffer';
-window.Buffer = Buffer; // Make Buffer available globally on the window object
 
 // Other imports
 import { HttpAgent, Actor } from '@dfinity/agent';
