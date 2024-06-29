@@ -16,6 +16,7 @@
         "@dfinity/principal": "^0.9.3",
         "buffer": "^6.0.3",
         "html-webpack-plugin": "^5.6.0",
+        "stream-browserify": "^3.0.0",
         "webpack": "^5.92.1",
         "webpack-cli": "^5.1.4"
     },

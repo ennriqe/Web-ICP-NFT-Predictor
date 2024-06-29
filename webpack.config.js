@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const NodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -12,6 +12,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.json'],
+        fallback: {
+            buffer: require.resolve('buffer/'),
+            stream: require.resolve('stream-browserify'),
+        },
     },
     module: {
         rules: [
@@ -31,7 +35,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
     ],
-    // Exclude node_modules from the bundle
-    // externals: [NodeExternals()],
 };
