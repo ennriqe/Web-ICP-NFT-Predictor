@@ -2,10 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call Canister</title>
-<script defer src="main.js"></script></head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .container input, .container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        .container p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+<script defer src="bundle.js"></script></head>
 <body>
-    <button id="callCanister">Call Canister</button>
-    <script src="main.js"></script>
+    <div class="container">
+        <label for="tokenID">Token ID:</label>
+        <input type="number" id="tokenID" name="tokenID">
+        
+        <label for="optionSelect">Collection:</label>
+        <select id="optionSelect">
+            <option value="rw623-hyaaa-aaaah-qctcq-cai">OG Medals</option>
+            <option value="ugdkf-taaaa-aaaak-acoia-cai">Mokoto Mechs</option>
+            <option value="4ggk4-mqaaa-aaaae-qad6q-cai">ICP Flower</option>
+            <option value="skjpp-haaaa-aaaae-qac7q-cai">Pineapple Punks</option>
+            <option value="pk6rk-6aaaa-aaaae-qaazq-cai">BTC Flower</option>
+            <option value="dhiaa-ryaaa-aaaae-qabva-cai">ETH Flower</option>
+            <option value="bxdf4-baaaa-aaaah-qaruq-cai">ICPunks</option>
+            <option value="3mttv-dqaaa-aaaah-qcn6q-cai">Dfinity Space Apes</option>
+            <option value="oeee4-qaaaa-aaaak-qaaeq-cai">Motoko Ghosts</option>
+        </select>
+        
+        <button id="callCanister">Call Canister</button>
+        <p id="prediction">Prediction: </p>
+    </div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

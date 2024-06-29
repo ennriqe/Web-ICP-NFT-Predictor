@@ -1,9 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const NodeExternals = require('webpack-node-externals');
+// const NodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
+    target: 'web',
     entry: './src/main.js',
     output: {
         filename: 'bundle.js',
@@ -32,5 +33,5 @@ module.exports = {
         }),
     ],
     // Exclude node_modules from the bundle
-    externals: [NodeExternals()],
+    // externals: [NodeExternals()],
 };
